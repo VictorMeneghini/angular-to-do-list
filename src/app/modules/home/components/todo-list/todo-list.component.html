@@ -5,11 +5,11 @@
       <input type="text" [(ngModel)]="item.task">
 
       <button>
-        <img src="assets/icons/icon-trash.svg" alt="icon-of-trash">
+        <img (click)="deleteItemTakList(i)" src="assets/icons/icon-trash.svg" alt="icon-of-trash">
       </button>
       
     </li>
   </ul>
 </section>
 <app-todo-input-add-itens></app-todo-input-add-itens>
-<app-todo-button-delete-all *ngIf="taskList.length"></app-todo-button-delete-all>
+<app-todo-button-delete-all *ngIf="taskList.length" (click)="deleteAllItens()"></app-todo-button-delete-all>
